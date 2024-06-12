@@ -29,6 +29,7 @@ p {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--blanco);
+    line-height: 2.2rem;
 }
 
 a {
@@ -124,17 +125,16 @@ h3 {
 .producto{
     background-color: var(--primarioOscuro);
     padding: 1rem;
-
 }
 .producto__imagen{
     width: 100%;
-    height: 80%;
+    height: 75%;
 }
 .producto__nombre{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .producto__precio{
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     color: var(--secundario);
 }
 .producto__nombre, .producto__precio{
@@ -142,4 +142,70 @@ h3 {
     margin: 1rem 0;
     text-align: center;
     line-height: 1.2;
+
+} 
+/*Graficos de muestra*/
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.grafico--mochilas{
+    grid-row: 2 / 3;
+    grid-column: 1/3;
+    background-image: url(../img/11.jpg);
+}
+.grafico--mochi{
+    background-image: url(../img/12.jpg);
+    grid-column: 1/3;
+    grid-row: 7/8;
+}
+@media (min-width:768px){
+    .grafico--mochi{
+        grid-row: 5/6;
+        grid-column: 2/4;
+    
+    }
+}
+/*NOSOTOROS*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+@media (min-width:768px){
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr) ;
+        column-gap:2rem ;
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1/2;
+    width: 100%;
+}
+@media (min-width:768px){
+    .nosotros__imagen{
+        grid-column: 2/3;
+    }
+}
+/*Bloques*/
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+
+}
+@media (min-width:760px){
+    .bloques{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 1rem;
+}
+.bloque__imagen{
+    width: 70%;
 }
